@@ -13,18 +13,12 @@ function addExpense() {
 function displayExpense() {
   const groupNameExpenses = document.getElementById("group-name-expenses");
   groupNameExpenses.innerHTML = "";
-  group.map(
-    (group, index, d) =>
+  group.forEach(
+    (group, index) =>
       (groupNameExpenses.innerHTML = ` <p>Name: ${group.groupEl} Expense: $${
         group.expense
       } ID: ${index + 1}</p> `)
   );
-
-  //   group.forEach((item, index) => {
-  //     groupNameExpenses.textContent = `
-  //            <h2>${item} ${index} </h2>
-  //     `;
-  //   });
 }
 
 function clearInputs() {
